@@ -16,7 +16,7 @@ main > div {
     flex-grow: 2;
   }
 }
-@media (max-width: 1025px) and (min-width: 764px) {
+@media (max-width: 1024px) and (min-width: 764px) {
   nav {
     display: flex;
     justify-content: space-between;

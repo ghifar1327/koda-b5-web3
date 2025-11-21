@@ -1,0 +1,95 @@
+main {
+  color: white;
+}
+.calc-container {
+  border: 2px solid black;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: max-content auto auto;
+  grid-template-areas:
+    "screencalc screencalc screencalc"
+    "calc1 calc2 calc2";
+  justify-content: center;
+  width: fit-content;
+  margin: 0 auto;
+}
+.screen-calc {
+  width: 100%;
+  height: 200px;
+  background-color: black;
+  grid-area: screencalc;
+  font-size: 100px;
+  text-align: end;
+}
+.calc-container,
+.calc-grid-1,
+.calc-grid-2 {
+  gap: 10px;
+}
+.calc-grid-1 {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-area: calc1;
+}
+.calc-grid-2 {
+  display: grid;
+  grid-template-columns: repeat(4, 100px);
+  grid-area: calc2;
+}
+.calc-grid-1 > div,
+.calc-grid-2 > div {
+  padding: 50px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(15, 15, 69);
+  height: 50px;
+  border-radius: 25px;
+}
+.span-column {
+  grid-column: 1 / span 2;
+  display: flex;
+  gap: 30px;
+}
+sup {
+  position: relative;
+  top: -5px;
+  font-size: 0.7em;
+}
+.btn-grey {
+  background-color: rgb(39, 39, 40) !important;
+}
+
+@media (min-width: 764px) and (max-width: 1024px) {
+      nav {
+    display: flex;
+    justify-content: space-between;
+  }
+  ul {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  .calc-container {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "screencalc"
+      "calc1"
+      "calc2";
+  }
+  .span-column {
+    grid-column: 1 / span 3;
+    gap: 60px;
+  }
+  .screen-calc {
+    grid-area: screencalc;
+  }
+  .calc-grid-1 {
+    grid-area: calc2;
+    grid-template-columns: repeat(4, 100px);
+  }
+
+  .calc-grid-2 {
+    grid-area: calc1;
+  }
+}

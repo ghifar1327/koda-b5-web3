@@ -8,7 +8,7 @@ ul {
 li {
   display: block;
 }
-@media screen and (max-width: 1025px) {
+@media screen and (max-width: 1024px) {
   nav > div {
     display: inline-block;
   }
