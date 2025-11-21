@@ -1,3 +1,21 @@
+ul {
+  list-style-type: none;
+}
+
+main > div {
+  display: flex;
+  div {
+    border: 1px solid black;
+    min-width: 100px;
+    height: 100px;
+    background-color: blue;
+    flex: 1;
+    /* flex-basis:200px ; */
+  }
+  div:nth-child(2) {
+    flex-grow: 2;
+  }
+}
 @media (max-width: 1025px) and (min-width: 764px) {
   nav {
     display: flex;
@@ -9,19 +27,3 @@
     gap: 20px;
   }
 }
-
-main>div{
-    display: flex;
-    div{
-    border: 1px solid black;
-    min-width: 100px;
-    height: 100px;
-    background-color: blue;
-    flex: 1;
-    /* flex-basis:200px ; */
-    }
-    div:nth-child(2){
-    flex-grow: 2;
-    }
-}
-
