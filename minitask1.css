@@ -1,0 +1,36 @@
+nav > div {
+  display: block;
+}
+ul {
+  position: relative;
+  top: 0;
+}
+li {
+  display: block;
+}
+@media screen and (max-width: 1025px) {
+  nav > div {
+    display: inline-block;
+  }
+  li {
+    display: inline-block;
+    margin-left: 10px;
+  }
+  ul {
+    position: absolute;
+    top: 20px;
+    right: 50px;
+  }
+}
+@media screen and (max-width: 764px) {
+  nav > div {
+    display: block;
+  }
+  ul {
+    position: relative;
+    top: 0;
+  }
+  li {
+    display: block;
+  }
+}
